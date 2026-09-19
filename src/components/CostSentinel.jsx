@@ -65,24 +65,36 @@ export default function CostSentinel({ onGoToChatWithRemediation }) {
       setRemediatedIds(leaks.map((l) => l.id));
       setIsRemediatingAll(false);
 
-      // Trigger Celebration Confetti
-      confetti({
-        particleCount: 120,
-        spread: 80,
-        origin: { y: 0.6 },
-        colors: ["#ff9900", "#10b981", "#00f0ff", "#a855f7"]
-      });
+      // Trigger Celebration Confetti safely
+      try {
+        if (typeof confetti === 'function') {
+          confetti({
+            particleCount: 120,
+            spread: 80,
+            origin: { y: 0.6 },
+            colors: ["#ff9900", "#10b981", "#00f0ff", "#a855f7"]
+          });
+        }
+      } catch (e) {
+        console.warn("Confetti animation skipped:", e);
+      }
     }, 4800);
   };
 
   const handleRemediateSingle = (id) => {
     if (!remediatedIds.includes(id)) {
       setRemediatedIds([...remediatedIds, id]);
-      confetti({
-        particleCount: 60,
-        spread: 60,
-        origin: { y: 0.7 },
-      });
+      try {
+        if (typeof confetti === 'function') {
+          confetti({
+            particleCount: 60,
+            spread: 60,
+            origin: { y: 0.7 },
+          });
+        }
+      } catch (e) {
+        console.warn("Confetti animation skipped:", e);
+      }
     }
   };
 
