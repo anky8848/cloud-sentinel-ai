@@ -15,7 +15,7 @@ export const AWS_ACCOUNT_INFO = {
   bedrockModel: "anthropic.claude-3-5-sonnet-20241022-v2:0",
   lastAuditTimestamp: "2026-09-19T08:35:00Z",
   shipGateStatus: "PASS_VERIFIED",
-  liveUrl: "http://cloud-sentinel-848175179383.s3-website-us-east-1.amazonaws.com",
+  liveUrl: "https://main.d1v5j7dwlfgomv.amplifyapp.com",
 };
 
 export const METRICS_SUMMARY = {
