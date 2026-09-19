@@ -1,7 +1,7 @@
 // CloudSentinel AI - AWS Infrastructure, Security & Cost Audit Data Model
 
 export const AWS_ACCOUNT_INFO = {
-  accountId: "8942-1058-4921",
+  accountId: "8481-7517-9383",
   accountAlias: "prod-cloud-sentinel-aws",
   region: "us-east-1 (N. Virginia)",
   availableRegions: [
@@ -10,12 +10,12 @@ export const AWS_ACCOUNT_INFO = {
     "eu-west-1 (Ireland)",
     "ap-southeast-1 (Singapore)"
   ],
-  iamRole: "arn:aws:iam::894210584921:role/BedrockConsoleAgentRole",
+  iamRole: "arn:aws:iam::848175179383:role/BedrockConsoleAgentRole",
   bedrockStatus: "CONNECTED_ACTIVE",
   bedrockModel: "anthropic.claude-3-5-sonnet-20241022-v2:0",
   lastAuditTimestamp: "2026-09-19T08:35:00Z",
   shipGateStatus: "PASS_VERIFIED",
-  liveUrl: "https://cloud-sentinel.amplifyapp.com",
+  liveUrl: "http://cloud-sentinel-848175179383.s3-website-us-east-1.amazonaws.com",
 };
 
 export const METRICS_SUMMARY = {
